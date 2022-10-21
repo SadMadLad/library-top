@@ -16,7 +16,8 @@ function book(author, title, pages, isRead){
         const titleTag = document.createElement("h2");
         const authorTag = document.createElement("p");
         const pagesTag = document.createElement("p");
-        const isReadTag = document.createElement("button")
+        const isReadTag = document.createElement("button");
+        const imageTag = document.createElement("div");
 
         titleTag.textContent = this.title;
         authorTag.textContent = this.author; 
