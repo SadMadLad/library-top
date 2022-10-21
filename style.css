@@ -5,10 +5,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --primary: #222831;
+    /* --primary: #222831;
     --primary-lite: #393E46;
     --secondary: #00ADB5;
-    --secondary-lite: #EEEEEE;
+    --secondary-lite: #EEEEEE; */
+
+    /* --primary: #F9F7F7;
+    --primary-lite: #DBE2EF;
+    --secondary: #3F72AF;
+    --secondary-lite: #112D4E; */
+
+    --primary: #EEEBDD;
+    --primary-lite: #CE1212;
+    --secondary: #810000;
+    --secondary-lite: #1B1717;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -32,7 +42,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    color: var(--secondary);
+    color: var(--primary);
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -72,34 +82,87 @@ h1 {
 
     background-color: var(--primary);
     border-bottom: 2px var(--secondary) solid;
+    color: var(--secondary);
 }
 
 /*Books*/
 #books {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-evenly;
+    gap: 50px;
 }
 .book {
-    height: 10rem;
-    width: 20%;
+    height: 15rem;
+    width: 25%;
    
-    display: grid;
-    grid-template-areas: 
-    "x y"
-    "x y"
-    "x y"
-    "x y";
+    display: flex;
+    flex-direction: row;
 
-    background-color: var(--primary);
+    margin-top: 50px;
+
+    background-color: var(--secondary);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px var(--secondary-lite);
 }
 .book > .book-details {
+    flex: 2.5;
+
     padding: 20px;
-    grid-area: x;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 .book > .image {
-    grid-area: y;
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    background-color: var(--secondary);
+    border-radius: 20px;
+}
+.book-details > h2 {
+    font-weight: 900;
+    font-size: 30px;
+}
+.book-details > h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+.book-details > p {
+    font-weight: 400;
+    font-size: 20px;
+}
+.book-details > button {
+    background-color: var(--secondary-lite);
+    color: var(--primary);
+    height: 20%;
+    width: 50%;
+
+    border-radius: 20px;
+}
+.image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border-left: 2px var(--secondary-lite) solid;
+    /* box-shadow: 1px 1px 2px var(--secondary-lite); */
+}
+.add-book {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+
+    border-radius: 100%;
+
+    bottom: 80px;
+    right: 80px;
+
+    color: var(--primary);
+    background-color: var(--secondary-lite);
+
+    font-size: 50px;
 }
