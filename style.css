@@ -2,6 +2,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary: #222831;
+    --primary-lite: #393E46;
+    --secondary: #00ADB5;
+    --secondary-lite: #EEEEEE;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -22,6 +30,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: var(--secondary);
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -47,4 +58,37 @@ table {
 	border-spacing: 0;
 }
 
-/*My CSS*/ 
+/*My CSS*/
+/*Base*/
+body {
+    background-color: var(--primary-lite);
+}
+h1 {
+    text-align: center;
+    padding: 20px;
+
+    font-weight: 900;
+    font-size: 5rem;
+
+    background-color: var(--primary);
+    border-bottom: 2px var(--secondary) solid;
+}
+
+/*Books*/
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.book {
+    height: 10rem;
+    width: 20%;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 20px;
+
+    background-color: var(--primary);
+}
