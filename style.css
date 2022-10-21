@@ -135,13 +135,21 @@ h1 {
     font-weight: 400;
     font-size: 20px;
 }
-.book-details > button {
+.book-details > .buttons {
+    display: flex;
+    gap: 30px;
+}
+.book-details > .buttons > button {
     background-color: var(--secondary-lite);
     color: var(--primary);
-    height: 20%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
 
+    padding: 10px;
     border-radius: 20px;
+}
+.book-details > .buttons > .read {
+    background-color: green;
 }
 .image > img {
     width: 100%;
