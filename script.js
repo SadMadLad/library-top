@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-let bookCounter = 4;
+let bookCounter = 0;
 let books = [
 //   new book(
 //     0,
