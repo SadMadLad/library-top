@@ -1,3 +1,4 @@
+const form = document.querySelector("#form");
 let bookCounter = 0;
 let books = [
 //   new book(
