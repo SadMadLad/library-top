@@ -8,31 +8,73 @@
 
   <body>
     <h1>Library</h1>
-    <div id="books">
-    </div>
+    <div id="books"></div>
 
-    <div class="modal">
-      <form>
-        <label for="title">Title: </label>
-        <input type="text" id="title" name="title" required/>
-        
-        <label for="author">Author: </label>
-        <input type="text" id="author" name="author" required/>
-        
-        <label for="pages">Pages: </label>
-        <input type="number" id="pages" name="pages" required/>
-      
-        <label for="image">Image URL: </label>
-        <p>If wrong or no URL is provided, a random image will be set.</p>
-        <input type="url" id="image" name="image"/>
-      
-        <input type="checkbox" id="read" name="read">
-        <label for="read">Already Read?</label>
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <div class="close-button">
+          <h1>New Book</h1>
+          <span class="close">&times;</span>
+        </div>
+        <form>
+          <div class="section modal-section">
+            <label for="title">Title: </label>
+            <input type="text" id="title" name="title" required />  
+          </div>
+          
+          <div class="section modal-section">
+            <label for="author">Author: </label>
+            <input type="text" id="author" name="author" required />  
+          </div>
+          
+          <div class="section modal-section">
+            <label for="pages">Pages: </label>
+            <input type="number" id="pages" name="pages" required />  
+          </div>
+          
+          <!-- <label for="image">Image URL: </label>
+          <p>If wrong or no URL is provided, a random image will be set.</p>
+          <input type="url" id="image" name="image" /> -->
 
-        <button class="submit">Submit</button>
-      </form>
+          <div class="section checkbox-section">
+            <label for="read">Already Read?</label>  
+            <input type="checkbox" id="read" name="read" />
+          </div>
+          
+          <button class="submit">Submit</button>
+        </form>
+      </div>
     </div>
-    <button class="add-book">+</button>
+    <button class="add-book" id="myBtn">+</button>
     <script src="./script.js"></script>
+    <script>
+      // From w3schools
+
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
