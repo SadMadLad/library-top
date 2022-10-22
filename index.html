@@ -13,7 +13,23 @@
 
     <div class="modal">
       <form>
+        <label for="title">Title: </label>
+        <input type="text" id="title" name="title" required/>
         
+        <label for="author">Author: </label>
+        <input type="text" id="author" name="author" required/>
+        
+        <label for="pages">Pages: </label>
+        <input type="number" id="pages" name="pages" required/>
+      
+        <label for="image">Image URL: </label>
+        <p>If wrong or no URL is provided, a random image will be set.</p>
+        <input type="url" id="image" name="image"/>
+      
+        <input type="checkbox" id="read" name="read">
+        <label for="read">Already Read?</label>
+
+        <button class="submit">Submit</button>
       </form>
     </div>
     <button class="add-book">+</button>

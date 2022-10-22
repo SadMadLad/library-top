@@ -1,5 +1,5 @@
+const form = document.querySelector("form");
 let bookCounter = 0;
-
 let books = [
     new book(0, 'English Book', 'Pagal Aadmi', 132, false, `https://source.unsplash.com/random/${bookCounter}`),
     new book(1, 'Biology', 'English Man', 200, false, `https://source.unsplash.com/random/${bookCounter}`),
@@ -101,3 +101,9 @@ function book(id, title, author, pages, isRead, imageURL){
 };
 
 renderBooks(books);
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = new FormData(e.target);
+    console.log(typeof form.get('read'));
+})
